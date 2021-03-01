@@ -1,0 +1,36 @@
+{% extends "home.html" %} {% load static %}
+{% block title %}Note{% endblock title %}
+{% block breadcrumbbar %}
+
+<!-- Start Breadcrumbbar -->
+
+<div class="breadcrumbbar bg-transparent">
+</div>
+
+<!-- End Breadcrumbbar -->
+
+{% endblock breadcrumbbar %}
+
+
+{% block content %}
+<div class="contentbar dark-outer-color-theme pt-5">
+  <div class="row justify-content-center dark-outer-color-theme">
+ 
+    <div class="card details-card bgc-none">
+        <h2 class="card-header header-bgc  py-0">{{object.title}} <i class=" ml-2 fa fa-star  {% if object.is_favourite is True %} text-warning{% endif %}" aria-hidden="true"></i></h2>
+
+        <div class="card-body py-0 ">
+            <div class="row">
+                <div class="col-12 dark-theme-text">{{object.content}}</div>
+                <div class="col-6">
+                <a class="btn btn-outline-dark" href="{{object.get_update_url}}">Update</a>
+                    </div>                <div class="col-6">
+                <a class="btn btn-outline-dark" href="{{object.get_delete_url}}">Delete</a>
+                    </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}

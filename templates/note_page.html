@@ -1,0 +1,26 @@
+{% extends "home.html" %} {% load static %}
+{% block title %}Note{% endblock title %}
+{% block breadcrumbbar %}
+
+<!-- Start Breadcrumbbar -->
+
+<div class="breadcrumbbar bg-transparent">
+</div>
+
+<!-- End Breadcrumbbar -->
+
+{% endblock breadcrumbbar %}
+
+
+{% block content %}
+
+<div class="contentbar dark-outer-color-theme pt-5">
+  <div class="row justify-content-center dark-outer-color-theme">
+ 
+ {% include 'note_list.html' %}
+
+
+  </div>
+</div>
+
+{% endblock content %}
