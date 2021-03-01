@@ -1,5 +1,14 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+vme
+vme/**
+venv
+venv/**
+
+users/migrations
+users/migrations/**
+sqlite3.db
+
 *.py[cod]
 *$py.class
 
